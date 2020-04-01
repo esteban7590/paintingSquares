@@ -1,0 +1,13 @@
+.contenedor {
+  display: inline-block;
+  width: 440px;
+  height: 440px;
+}
+
+.color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=style.css.map */
