@@ -7,21 +7,25 @@ window.onload = () => {
     div.className = "color";
     // A cada div le estoy poniendo un evento para saber cuando pasan por encima de el
     div.onmouseover = () => {
-      console.log(mouseClick);
-      if (mouseClick) {
+      //console.log(mouseClick);
+      if (mouseClick === 1) {
         div.style.backgroundColor = "green";
+      } else if (mouseClick === 2) {
+        div.style.backgroundColor = "transparent";
       }
     };
-
     contenedor.appendChild(div);
   }
-
   // Sabemos cuando de click
-  contenedor.onmousedown = () => {
-    mouseClick = true;
+  contenedor.onmousedown = event => {
+    if (event.which == 1) {
+      mouseClick = 1;
+    } else {
+      mouseClick = 2;
+    }
   };
-  // Sabemos cuando dejee de darle click
+  // Sabemos cuando deje de darle click
   contenedor.onmouseup = () => {
-    mouseClick = false;
+    mouseClick = 0;
   };
 };
